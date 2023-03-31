@@ -1,0 +1,27 @@
+<!--
+ * Dgmjr.EntityFrameworkCore.Entities.csproj
+ * 
+ *   Created: 2022-12-21-01:35:09
+ *   Modified: 2022-12-21-01:35:09
+ * 
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *   
+ *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks> -->
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- <ItemGroup Condition="'$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local'">
+    <ProjectReference Include="../../../Types/src/Core/Abstractions/Dgmjr.Abstractions.csproj" />
+    <ProjectReference Include="../Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" />
+  </ItemGroup> -->
+  <ItemGroup>
+    <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
+  </ItemGroup>
+</Project>

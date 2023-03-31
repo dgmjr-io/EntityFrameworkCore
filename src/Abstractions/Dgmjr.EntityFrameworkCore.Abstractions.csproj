@@ -1,0 +1,31 @@
+<!--
+ * Dgmjr.EntityFrameworkCore.Abstractions.csproj
+ * 
+ *   Created: 2022-10-18-10:51:28
+ *   Modified: 2022-11-11-07:21:06
+ * 
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *   
+ *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+      <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+      <AssemblyName>Dgmjr.EntityFrameworkCore.Abstractions</AssemblyName>
+      <PackageId>$(AssemblyName)</PackageId>
+      <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" />
+      <PackageReference Include="System.Collections.Generic.Usings" />
+      <PackageReference Include="Dgmjr.Abstractions" ExcludeAssets="ContentFiles" />
+      <PackageReference Include="Dgmjr.Security.Constants" ExcludeAssets="ContentFiles" />
+      <SourceGenerator  Include="Dgmjr.InterfaceGenerator" />
+    </ItemGroup>
+    <ItemGroup>
+      <Using Remove="System.Text.Json*" />
+    </ItemGroup>
+  </Project>

@@ -1,0 +1,27 @@
+<!--
+ * Dgmjr.EntityFrameworkCore.csproj
+ * 
+ *   Created: 2022-10-21-10:15:51
+ *   Modified: 2022-11-06-05:41:52
+ * 
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *   
+ *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="MetapackageSdk" />
+  <PropertyGroup>
+		<TargetFrameworks>net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>Abstractions and tools for EF Core</Description>
+    <DocsDir>$(MSBuildProjectDirectory)/./docs</DocsDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./src/**/*.*proj" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageTag Include="EntityFrameworkCore" />
+	</ItemGroup>
+</Project>
