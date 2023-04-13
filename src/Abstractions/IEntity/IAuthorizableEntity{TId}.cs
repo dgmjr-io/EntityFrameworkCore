@@ -14,6 +14,10 @@ namespace Dgmjr.EntityFrameworkCore.Abstractions;
 
 using System.Security.Claims;
 
+/// <summary>
+/// <inheritdoc cref="IAuthorizableEntity" path="/summary" />
+/// </summary>
+/// <typeparam name="TId"></typeparam>
 public interface IAuthorizableEntity<TId> : IEntity<TId>, IAuthorizableEntity where TId : IComparable, IEquatable<TId>
 {
 }

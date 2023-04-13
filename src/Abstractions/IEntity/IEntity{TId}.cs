@@ -12,7 +12,7 @@
 
 namespace  Dgmjr.EntityFrameworkCore.Abstractions;
 
-/// <summary>A base interface for database entities with a strongly-typed <see cref="IIdentifiable{TId}.Id" /> property.</summary>
+/// <summary><inheritdoc cref="IEntity" path="/summary" /> with a strongly-typed <see cref="IIdentifiable{TId}.Id" /> property.</summary>
 public interface IEntity<TId> : IIdentifiable<TId> where TId : IComparable, IEquatable<TId>
 {
 

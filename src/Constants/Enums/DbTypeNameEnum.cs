@@ -1,26 +1,38 @@
 namespace Dgmjr.EntityFrameworkCore.Enums;
 
+
+/// <summary>Enum representing database type names, with each enum value having a corresponding string value represented by the Display attribute.</summary>
 [GenerateEnumerationRecordStruct("DbTypeName", "Dgmjr.EntityFrameworkCore")]
 public enum DbTypeName
 {
-    [Display(Name = "bigint")]
+    /// <summary> Database type of bigint.</summary>
+    [Display(Name = "bigint", Description = " Database type of bigint.", ShortName = "bigint")]
     DbTypeBigInt,
-    [Display(Name = "int")]
+    /// <summary> Database type of int.</summary>
+    [Display(Name = "int", Description = " Database type of int.", ShortName = "int")]
     DbTypeInt,
-    [Display(Name = "byte")]
+    /// <summary> Database type of byte.</summary>
+    [Display(Name = "byte", Description = " Database type of byte.", ShortName = "byte")]
     DbTypeByte,
-    [Display(Name = "varchar")]
+    /// <summary> Database type of varchar.</summary>
+    [Display(Name = "varchar", Description = " Database type of varchar.", ShortName = "varchar")]
     DbTypeVarChar,
-    [Display(Name = "nvarchar")]
+    /// <summary> Database type of nvarchar.</summary>
+    [Display(Name = "nvarchar", Description = " Database type of nvarchar.", ShortName = "nvarchar")]
     DbTypeNVarChar,
-    [Display(Name = "nchar")]
+    /// <summary> Database type of nchar.</summary>
+    [Display(Name = "nchar", Description = " Database type of nchar.", ShortName = "nchar")]
     DbTypeNChar,
-    [Display(Name = "char")]
+    /// <summary> Database type of char.</summary>
+    [Display(Name = "char", Description = " Database type of char.", ShortName = "char")]
     DbTypeChar,
-    [Display(Name = "tinyint")]
+    /// <summary> Database type of tinyint.</summary>
+    [Display(Name = "tinyint", Description = " Database type of tinyint.", ShortName = "tinyint")]
     DbTypeTinyInt,
-    [Display(Name = "rowversion")]
+    /// <summary> Database row version type.</summary>
+    [Display(Name = "rowversion", Description = " Database row version type.", ShortName = "rowversion")]
     DbTypeRowVersion,
-    [Display(Name = "datetime")]
+    /// <summary> Database type of datetime.</summary>
+    [Display(Name = "datetime", Description = " Database type of datetime.", ShortName = "datetime")]
     DbTypeDateTime
 }

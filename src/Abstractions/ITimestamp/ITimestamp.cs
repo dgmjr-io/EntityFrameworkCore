@@ -1,14 +1,16 @@
 namespace Dgmjr.EntityFrameworkCore.Abstractions;
 
 /// <summary>
-/// A timestamp for something happening in the database, including rowversion, a dictionary of details, and the ID of the user who made the change.
+/// A timestamp for something happening in the database, including <inheritdoc cref="ITimestamp.By" path="/value" />, <inheritdoc cref="ITimestamp.When" path="/value" />, <inheritdoc cref="ITimestamp.Details" path="/value" />, and <inheritdoc cref="ITimestamp.Version" path="/value" />.
 /// </summary>
 public interface ITimestamp
 {
-    /// <value>The ID of the user who made the change</value>
+    /// <value>the ID of the user who made the change</value>
     object? By { get; set; }
-    /// <value>The <see cref="DateTime"/> of the change</value>
+    /// <value>the <see cref="DateTime"/> of the change</value>
     DateTimeOffset When { get; set; }
-    /// <value>An <see cref="IStringDictionary"/> of the details of the change (if any)</value>
+    /// <value>tn <see cref="IStringDictionary"/> of the details of the change (if any)</value>
     IStringDictionary Details { get; set; }
+    /// <value>the row version number of the change</value>
+    int Version { get; set; }
 }

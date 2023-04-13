@@ -13,23 +13,30 @@ using System;
 
 namespace Dgmjr.EntityFrameworkCore.Abstractions;
 
+/// <summary>Interface for an entity that has <inheritdoc cref="IDeletable.Deleted" path="/value" />.</summary>
 public interface IDeletable
 {
-    /// <value>A <see cref="ITimestamp" /> holding the details of the object's deletion (if applicable, <see langword="null"/>/<see langword="default"/> otherwise)</value>
+    /// <value>a <see cref="ITimestamp" /> holding the details of the object's deletion (if applicable, <see langword="null"/>/<see langword="default"/> otherwise)</value>
     ITimestamp? Deleted { get; set; }
-    #if NET6_0_OR_GREATER
+#if NET6_0_OR_GREATER
+    /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
     bool IsDeleted => /*Deleted?.When.HasValue && */Deleted.When < DateTimeOffset.UtcNow;
-    #else
+#else
+    /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
     bool IsDeleted { get; }
     #endif
 }
+
+/// <summary><inheritdoc cref="IDeletable" path="/summary" /> with the strongly-typed ID of the user who deleted it.</summary>
 public interface IDeletable<TUserId>
 {
-    /// <value><inheritdoc cref="IDeletable.Deleted" />  with the ID of the user who performed the operation</value>
+    /// <value><inheritdoc cref="IDeletable.Deleted" path="/value" />  with the ID of the user who performed the operation</value>
     ITimestamp<TUserId> Deleted { get; set; }
-    #if NET6_0_OR_GREATER
+#if NET6_0_OR_GREATER
+    /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
     bool IsDeleted => /*Deleted?.When.HasValue && */Deleted.When < DateTimeOffset.UtcNow;
-    #else
+#else
+    /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
     bool IsDeleted { get; }
     #endif
 }
