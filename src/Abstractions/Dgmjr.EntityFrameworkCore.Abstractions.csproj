@@ -24,6 +24,7 @@
       <PackageReference Include="Dgmjr.Abstractions" ExcludeAssets="ContentFiles" />
       <PackageReference Include="Dgmjr.Security.Constants" ExcludeAssets="ContentFiles" />
       <SourceGenerator  Include="Dgmjr.InterfaceGenerator" />
+      <SourceGenerator  Include="Dgmjr.InterfaceGenerator.Decomposer" />
     </ItemGroup>
     <ItemGroup>
       <Using Remove="System.Text.Json*" />
