@@ -24,7 +24,7 @@ public interface IDeletable
 #else
     /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
     bool IsDeleted { get; }
-    #endif
+#endif
 }
 
 /// <summary><inheritdoc cref="IDeletable" path="/summary" /> with the strongly-typed ID of the user who deleted it.</summary>
@@ -38,5 +38,5 @@ public interface IDeletable<TUserId>
 #else
     /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
     bool IsDeleted { get; }
-    #endif
+#endif
 }
