@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 [Decomopse]
-public class DbContext2 : DbContext {}
+public class DbContext2 : DbContext { }
 
 /// <summary>
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
