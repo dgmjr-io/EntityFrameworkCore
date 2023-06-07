@@ -28,4 +28,5 @@ public abstract class TimestampedEntity : IEntity, IEquatable<Entity>
     public bool Equals(Entity other) => GetType().IsAssignableFrom(other.GetType()) && Id.Equals(other.Id);
 
     public override int GetHashCode() => GetType().GetHashCode() ^ Id.GetHashCode();
+    override public bool Equals(object? obj) => obj is Entity entity && Equals(entity);
 }

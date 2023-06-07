@@ -11,6 +11,7 @@
  */
 
 namespace Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Abstractions;
 
 public class ValidatedDbContext : DbContext, IValidatedDbContext
 {

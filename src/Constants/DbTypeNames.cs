@@ -55,4 +55,9 @@ public static partial class DbTypeNames
     [Display(Name = "datetime", ShortName = "datetime", Description = " Database type of datetime.")]
     public const string DbTypeDateTime = "datetime";
 
+    /// <summary> Database type of varbinary.</summary>
+    /// <value>varbinary</value>
+    [Display(Name = "varbinary", ShortName = "varbinary", Description = " Database type of varbinary.")]
+    public const string DbTypeVarBinary = "varbinary";
+
 }

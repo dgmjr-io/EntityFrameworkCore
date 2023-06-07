@@ -34,5 +34,8 @@ public enum DbTypeName
     DbTypeRowVersion,
     /// <summary> Database type of datetime.</summary>
     [Display(Name = "datetime", Description = " Database type of datetime.", ShortName = "datetime")]
-    DbTypeDateTime
+    DbTypeDateTime,
+    /// <summary> Database type of varbinary.</summary>
+    [Display(Name = "varbinary", Description = " Database type of varbinary.", ShortName = "varbinary")]
+    DbTypeVarBinary
 }
