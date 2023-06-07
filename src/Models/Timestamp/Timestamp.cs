@@ -18,4 +18,6 @@ public struct Timestamp : ITimestamp
     [DataType(DataType.DateTime)]
     public DateTimeOffset When { get; set; }
     public IStringDictionary Details { get; set; }
+    /// <inheritdoc />
+    public int Version { get; set; }
 }

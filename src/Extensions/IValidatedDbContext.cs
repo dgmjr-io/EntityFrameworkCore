@@ -10,10 +10,14 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-using Microsoft.EntityFrameworkCore.Abstractions;
+namespace Microsoft.EntityFrameworkCore.Abstractions;
 
 [GenerateInterface(typeof(Microsoft.EntityFrameworkCore.ValidatedDbContext))]
 public interface IValidatedDbContext : IDbContext
 {
     void Validate();
+}
+
+public interface IValidatedDbContext<T> : IValidatedDbContext, IDbContext<T> where T : IValidatedDbContext<T>
+{
 }

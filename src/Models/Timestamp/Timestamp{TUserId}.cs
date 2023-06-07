@@ -14,4 +14,6 @@ public struct Timestamp<TUserId> : ITimestamp<TUserId>
     public DateTimeOffset When { get; set; } = DateTimeOffset.UtcNow;
     public IStringDictionary Details { get; set; } = new StringDictionary();
     object ITimestamp.By { get => By!; set => By = (TUserId)value; }
+    /// <inheridoc />
+    public int Version { get; set; }
 }
