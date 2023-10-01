@@ -16,9 +16,6 @@ namespace Dgmjr.EntityFrameworkCore;
 
 public class JsonObjectConverter<T> : ValueConverter<T?, string>
 {
-    public JsonObjectConverter() : base(
-        v => Serialize(v, Jso.Default),
-        v => Deserialize<T>(v, Jso.Default))
-    {
-    }
+    public JsonObjectConverter()
+        : base(v => Serialize(v, Jso.Default), v => Deserialize<T>(v, Jso.Default)) { }
 }

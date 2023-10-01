@@ -14,7 +14,8 @@ namespace Microsoft.EntityFrameworkCore;
 
 public class DbEntityValidationException : Exception
 {
-    public DbEntityValidationException(string message, List<ValidationResult> errors) : base(message)
+    public DbEntityValidationException(string message, List<ValidationResult> errors)
+        : base(message)
     {
         Errors = errors;
     }

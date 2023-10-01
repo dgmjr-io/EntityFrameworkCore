@@ -1,4 +1,5 @@
 namespace Dgmjr.EntityFrameworkCore.Extensions;
+
 using static System.Randoms;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.ValueGeneration;

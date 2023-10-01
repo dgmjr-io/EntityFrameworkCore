@@ -1,11 +1,11 @@
 <!--
  * Dgmjr.EntityFrameworkCore.csproj
- * 
+ *
  *   Created: 2022-10-21-10:15:51
  *   Modified: 2022-11-06-05:41:52
- * 
+ *
  *   Author: David G. Moore, Jr. <david@dgmjr.io>
- *   
+ *
  *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
@@ -19,7 +19,11 @@
     <DocsDir>$(MSBuildProjectDirectory)/./docs</DocsDir>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="./src/**/*.*proj" />
+    <ProjectReference Include="./src/Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" />
+    <ProjectReference Include="./src/Constants/Dgmjr.EntityFrameworkCore.Constants.csproj" />
+    <ProjectReference Include="./src/Extensions/Dgmjr.EntityFrameworkCore.Extensions.csproj" />
+    <ProjectReference Include="./src/Entities/Dgmjr.EntityFrameworkCore.Entities.csproj" />
+    <ProjectReference Include="./src/Models/Dgmjr.EntityFrameworkCore.Models.csproj" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageTag Include="EntityFrameworkCore" />

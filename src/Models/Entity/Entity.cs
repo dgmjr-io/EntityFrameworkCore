@@ -12,6 +12,7 @@
 
 
 namespace Dgmjr.EntityFrameworkCore.Models;
+
 using Dgmjr.EntityFrameworkCore.Abstractions;
 
 /// <summary>
@@ -25,8 +26,10 @@ public abstract class TimestampedEntity : IEntity, IEquatable<Entity>
     public virtual ITimestamp Updated { get; set; } = new Timestamp();
     public virtual ITimestamp? Deleted { get; set; } = default;
 
-    public bool Equals(Entity other) => GetType().IsAssignableFrom(other.GetType()) && Id.Equals(other.Id);
+    public bool Equals(Entity other) =>
+        GetType().IsAssignableFrom(other.GetType()) && Id.Equals(other.Id);
 
     public override int GetHashCode() => GetType().GetHashCode() ^ Id.GetHashCode();
-    override public bool Equals(object? obj) => obj is Entity entity && Equals(entity);
+
+    public override bool Equals(object? obj) => obj is Entity entity && Equals(entity);
 }

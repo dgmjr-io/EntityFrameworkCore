@@ -27,33 +27,37 @@ public interface IAuthorizableEntity : IEntity
     bool IsAuthorized(ClaimsPrincipal principal, string operation);
 
 #if NET6_0_OR_GREATER
-/// <summary>
-/// Checks if the specified principal has permission to read the entity.
-/// </summary>
-/// <param name="principal">Claims principal that represents the user.</param>
-/// <returns>True if the principal has permission to read the entity, else false.</returns>
-bool IsAuthorizedToRead(ClaimsPrincipal principal) => IsAuthorized(principal, Dgmjr.Security.Operations.Read.Name);
+    /// <summary>
+    /// Checks if the specified principal has permission to read the entity.
+    /// </summary>
+    /// <param name="principal">Claims principal that represents the user.</param>
+    /// <returns>True if the principal has permission to read the entity, else false.</returns>
+    bool IsAuthorizedToRead(ClaimsPrincipal principal) =>
+        IsAuthorized(principal, Dgmjr.Security.Operations.Read.Name);
 
-/// <summary>
-/// Checks if the specified principal has permission to update the entity.
-/// </summary>
-/// <param name="principal">Claims principal that represents the user.</param>
-/// <returns>True if the principal has permission to update the entity, else false.</returns>
-bool IaAuthorizedToUpdate(ClaimsPrincipal principal) => IsAuthorized(principal, Dgmjr.Security.Operations.Update.Name);
+    /// <summary>
+    /// Checks if the specified principal has permission to update the entity.
+    /// </summary>
+    /// <param name="principal">Claims principal that represents the user.</param>
+    /// <returns>True if the principal has permission to update the entity, else false.</returns>
+    bool IaAuthorizedToUpdate(ClaimsPrincipal principal) =>
+        IsAuthorized(principal, Dgmjr.Security.Operations.Update.Name);
 
-/// <summary>
-/// Checks if the specified principal has permission to delete the entity.
-/// </summary>
-/// <param name="principal">Claims principal that represents the user.</param>
-/// <returns>True if the principal has permission to delete the entity, else false.</returns>
-bool IsAuthorizedToDelete(ClaimsPrincipal principal) => IsAuthorized(principal, Dgmjr.Security.Operations.Delete.Name);
+    /// <summary>
+    /// Checks if the specified principal has permission to delete the entity.
+    /// </summary>
+    /// <param name="principal">Claims principal that represents the user.</param>
+    /// <returns>True if the principal has permission to delete the entity, else false.</returns>
+    bool IsAuthorizedToDelete(ClaimsPrincipal principal) =>
+        IsAuthorized(principal, Dgmjr.Security.Operations.Delete.Name);
 
-/// <summary>
-/// Checks if the specified principal has permission to create the entity.
-/// </summary>
-/// <param name="principal">Claims principal that represents the user.</param>
-/// <returns>True if the principal has permission to create the entity, else false.</returns>
-bool IsAuthorizedToCreate(ClaimsPrincipal principal) => IsAuthorized(principal, Dgmjr.Security.Operations.Create.Name);
+    /// <summary>
+    /// Checks if the specified principal has permission to create the entity.
+    /// </summary>
+    /// <param name="principal">Claims principal that represents the user.</param>
+    /// <returns>True if the principal has permission to create the entity, else false.</returns>
+    bool IsAuthorizedToCreate(ClaimsPrincipal principal) =>
+        IsAuthorized(principal, Dgmjr.Security.Operations.Create.Name);
 #else
     /// <summary>
     /// Checks if the specified principal has permission to read the entity.

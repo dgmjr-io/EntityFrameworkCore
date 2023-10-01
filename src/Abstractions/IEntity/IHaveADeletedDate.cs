@@ -18,12 +18,23 @@ public interface IDeletable
 {
     /// <value>a <see cref="ITimestamp" /> holding the details of the object's deletion (if applicable, <see langword="null"/>/<see langword="default"/> otherwise)</value>
     ITimestamp? Deleted { get; set; }
+<<<<<<< HEAD
 #if NET6_0_OR_GREATER
     /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
     bool IsDeleted => /*Deleted?.When.HasValue && */Deleted.When < DateTimeOffset.UtcNow;
 #else
     /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
     bool IsDeleted { get; }
+=======
+
+#if NET6_0_OR_GREATER
+    /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
+    bool IsDeleted => /*Deleted?.When.HasValue && */
+        Deleted.When < DateTimeOffset.UtcNow;
+#else
+    /// <value><see langword="true" /> if the object has been deleted, <see langword="false" /> otherwise</value>
+    bool IsDeleted { get; }
+>>>>>>> 6854a28 (ran csharpier)
 #endif
 }
 
@@ -32,11 +43,22 @@ public interface IDeletable<TUserId>
 {
     /// <value><inheritdoc cref="IDeletable.Deleted" path="/value" />  with the ID of the user who performed the operation</value>
     ITimestamp<TUserId> Deleted { get; set; }
+<<<<<<< HEAD
 #if NET6_0_OR_GREATER
     /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
     bool IsDeleted => /*Deleted?.When.HasValue && */Deleted.When < DateTimeOffset.UtcNow;
 #else
     /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
     bool IsDeleted { get; }
+=======
+
+#if NET6_0_OR_GREATER
+    /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
+    bool IsDeleted => /*Deleted?.When.HasValue && */
+        Deleted.When < DateTimeOffset.UtcNow;
+#else
+    /// <value><inheritdoc cref="IDeletable.IsDeleted" path="/value" />  with the ID of the user who performed the operation</value>
+    bool IsDeleted { get; }
+>>>>>>> 6854a28 (ran csharpier)
 #endif
 }

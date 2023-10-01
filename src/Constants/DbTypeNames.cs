@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+
 namespace Dgmjr.EntityFrameworkCore.Constants;
 
 /// <summary> Static class containing string constants for all supported database type names.</summary>
@@ -27,11 +28,10 @@ public static partial class DbTypeNames
 
     /// <summary> Database type of nvarchar.</summary>
     /// <value>nvarchar</value>
-    [Display(Name = "nvarchar", ShortName = "nvarchar", Description = " Database type of nvarchar.")]
+    [Display()]
     public const string DbTypeNVarChar = "nvarchar";
 
     /// <summary> Database type of nchar.</summary>
-    /// <value>nchar</value>
     [Display(Name = "nchar", ShortName = "nchar", Description = " Database type of nchar.")]
     public const string DbTypeNChar = "nchar";
 
@@ -47,17 +47,28 @@ public static partial class DbTypeNames
 
     /// <summary> Database row version type.</summary>
     /// <value>rowversion</value>
-    [Display(Name = "rowversion", ShortName = "rowversion", Description = " Database row version type.")]
+    [Display(
+        Name = "rowversion",
+        ShortName = "rowversion",
+        Description = " Database row version type."
+    )]
     public const string DbTypeRowVersion = "rowversion";
 
     /// <summary> Database type of datetime.</summary>
     /// <value>datetime</value>
-    [Display(Name = "datetime", ShortName = "datetime", Description = " Database type of datetime.")]
+    [Display(
+        Name = "datetime",
+        ShortName = "datetime",
+        Description = " Database type of datetime."
+    )]
     public const string DbTypeDateTime = "datetime";
 
     /// <summary> Database type of varbinary.</summary>
     /// <value>varbinary</value>
-    [Display(Name = "varbinary", ShortName = "varbinary", Description = " Database type of varbinary.")]
+    [Display(
+        Name = "varbinary",
+        ShortName = "varbinary",
+        Description = " Database type of varbinary."
+    )]
     public const string DbTypeVarBinary = "varbinary";
-
 }

@@ -1,4 +1,3 @@
-
 namespace Dgmjr.EntityFrameworkCore.Abstractions;
 
 /// <summary>Interface for an entity with <inheritdoc cref="IUpdatable.Updated" path="/value" /></summary>

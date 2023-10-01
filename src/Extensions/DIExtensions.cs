@@ -11,17 +11,20 @@
  */
 
 namespace Microsoft.Extensions.DependencyInjection;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 public static class DIExtensions
 {
     public static IServiceCollection AddDbContext<TContext>(this IServiceCollection services)
-    where TContext : DbContext
+        where TContext : DbContext
     {
         var config = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
         var dbContextName = typeof(TContext).Name.Replace(nameof(DbContext), string.Empty);
-        services.AddDbContext<TContext>(builder => builder.UseSqlServer(config.GetConnectionString(dbContextName)));
+        services.AddDbContext<TContext>(
+            builder => builder.UseSqlServer(config.GetConnectionString(dbContextName))
+        );
         return services;
     }
 }

@@ -14,7 +14,8 @@ namespace Microsoft.EntityFrameworkCore.Extensions;
 
 public static class DataSeedingExtensions
 {
-    public static int Seed<T>(this DbContext db, IEnumerable<T> entities) where T : class
+    public static int Seed<T>(this DbContext db, IEnumerable<T> entities)
+        where T : class
     {
         var count = 0;
         foreach (var entity in entities)

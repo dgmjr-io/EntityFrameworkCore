@@ -1,11 +1,11 @@
-/* 
+/*
  * Entity{Id}.cs
- * 
+ *
  *   Created: 2022-12-28-04:10:43
  *   Modified: 2023-01-03-02:07:12
- * 
+ *
  *   Author: David G. Moore, Jr. <david@dgmjr.io>
- *   
+ *
  *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
@@ -22,13 +22,24 @@ using Dgmjr.EntityFrameworkCore.Abstractions;
 public abstract class TimestampedEntity<TId> : Entity<TId>
     where TId : IComparable, IEquatable<TId>
 {
-    public virtual TId Id { get => (TId)((IIdentifiable)this).Id; set => ((IHaveAWritableId)this).Id = value; }
+    public virtual TId Id
+    {
+        get => (TId)((IIdentifiable)this).Id;
+        set => ((IHaveAWritableId)this).Id = value;
+    }
 
     public virtual ITimestamp Created { get; set; } = new Timestamp();
     public virtual ITimestamp Updated { get; set; } = new Timestamp();
     public virtual ITimestamp? Deleted { get; set; } = default(Timestamp);
-    public virtual int CompareTo(IEntity<TId>? other) => Id.CompareTo(other == default ? default : (other as IIdentifiable<TId>).Id);
-    public virtual bool Equals(IEntity<TId>? other) => Id.Equals(other == default ? default : (other as IIdentifiable<TId>).Id);
-    public virtual int CompareTo(IEntity? other) => CompareTo(other == default ? default : other as IEntity<TId>);
+
+    public virtual int CompareTo(IEntity<TId>? other) =>
+        Id.CompareTo(other == default ? default : (other as IIdentifiable<TId>).Id);
+
+    public virtual bool Equals(IEntity<TId>? other) =>
+        Id.Equals(other == default ? default : (other as IIdentifiable<TId>).Id);
+
+    public virtual int CompareTo(IEntity? other) =>
+        CompareTo(other == default ? default : other as IEntity<TId>);
+
     public bool Equals(IEntity? other) => this.Id?.Equals(other?.Id) ?? false;
 }

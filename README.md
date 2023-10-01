@@ -1,24 +1,21 @@
 ---
-
-title: Dgmjr.EntityFrameworkCore
-lastmod: 2023-06-04T00:58:46.234Z
-date: 2022-10-16-08:37:01
+title: DGMJR - Entity Framework Core
+lastmod: 2023-07-13T05:34:04.553Z
+date: 2023-07-13T05:33:37.492Z
 license: MIT
 type: readme
-slug: dgmjr-entityframeworkcore
+slug: dgmjr-entity-framework-core
 project: Dgmjr.EntityFrameworkCore
-description: Abstractions & tools for EntityFrameworkCore
+description: Contains abstractions, extensions, and classes for working with EntityFrameworkCore.
 authors:
-- dgmjr
-categories:
-- database
-----------
+  - dgmjr
+keywords:
+  - database
+  - entityframeworkcore
+version: 0.0.1
+---
 
-# Dgmjr.EntityFrameworkCore
-
-Abstractions and tools for EF Core
-
-# Dgmjr.EntityFrameworkCore
+# DGMJR - Entity Framework Core
 
 Contains abstractions, extensions, and classes for working with EntityFrameworkCore.
 

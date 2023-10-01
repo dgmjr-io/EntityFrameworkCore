@@ -18,6 +18,5 @@ using System.Security.Claims;
 /// <inheritdoc cref="IAuthorizableEntity" path="/summary" />
 /// </summary>
 /// <typeparam name="TId"></typeparam>
-public interface IAuthorizableEntity<TId> : IEntity<TId>, IAuthorizableEntity where TId : IComparable, IEquatable<TId>
-{
-}
+public interface IAuthorizableEntity<TId> : IEntity<TId>, IAuthorizableEntity
+    where TId : IComparable, IEquatable<TId> { }

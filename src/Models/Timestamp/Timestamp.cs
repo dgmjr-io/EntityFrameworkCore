@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Dgmjr.EntityFrameworkCore.Abstractions;
+
 namespace Dgmjr.EntityFrameworkCore;
 
 /// <summary>
@@ -15,9 +16,11 @@ public struct Timestamp : ITimestamp
     }
 
     public object? By { get; set; }
+
     [DataType(DataType.DateTime)]
     public DateTimeOffset When { get; set; }
     public IStringDictionary Details { get; set; }
+
     /// <inheritdoc />
     public int Version { get; set; }
 }

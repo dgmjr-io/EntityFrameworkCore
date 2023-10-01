@@ -22,6 +22,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace Dgmjr.EntityFrameworkCore.Models;
+
 using Dgmjr.EntityFrameworkCore.Abstractions;
 
 /// <summary>
@@ -34,7 +35,10 @@ public abstract class Entity : IEntity, IEquatable<IEntity>, IComparable<IEntity
 
     public abstract int CompareTo(IEntity? other);
     public abstract int CompareTo(object? obj);
+
     public virtual bool Equals(IEntity? other) => GetHashCode() == other?.GetHashCode();
+
     public override int GetHashCode() => Id.GetHashCode();
+
     public override bool Equals(object? obj) => obj is IEntity entity && Equals(entity);
 }

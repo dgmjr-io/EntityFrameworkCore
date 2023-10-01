@@ -13,4 +13,5 @@
 namespace Microsoft.EntityFrameworkCore.Abstractions;
 
 [GenerateInterfaceAttribute(typeof(DbSet<>))]
-public partial interface IDbSet<TEntity> where TEntity : class { }
+public partial interface IDbSet<TEntity>
+    where TEntity : class { }

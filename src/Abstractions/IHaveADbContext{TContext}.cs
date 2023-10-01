@@ -4,7 +4,8 @@ namespace Microsoft.EntityFrameworkCore.Abstractions;
 /// <inheritdoc cref="IHaveADbContext" />
 /// </summary>
 /// <typeparam name="TContext">The type of the database context</typeparam>
-public interface IHaveADbContext<out TContext> : IHaveADbContext where TContext : IDbContext, IDbContext<TContext>
+public interface IHaveADbContext<out TContext> : IHaveADbContext
+    where TContext : IDbContext, IDbContext<TContext>
 {
     new TContext Db { get; }
 #if NET6_0_OR_GREATER

@@ -11,11 +11,8 @@
 //
 
 namespace Microsoft.EntityFrameworkCore.Abstractions;
+
 using Microsoft.EntityFrameworkCore;
-
-
-[Decomopse]
-public class DbContext2 : DbContext { }
 
 /// <summary>
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
@@ -34,7 +31,8 @@ public partial interface IDbContext
 /// <summary>
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
 /// </summary>
-public interface IDbContext<TSelf> : IDbContext where TSelf : IDbContext, IDbContext<TSelf>
+public interface IDbContext<TSelf> : IDbContext
+    where TSelf : IDbContext, IDbContext<TSelf>
 {
 #if NET6_0_OR_GREATER
     // /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
