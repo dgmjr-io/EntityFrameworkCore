@@ -19,4 +19,5 @@ using System.Security.Claims;
 /// </summary>
 /// <typeparam name="TId"></typeparam>
 public interface IAuthorizableEntity<TId> : IEntity<TId>, IAuthorizableEntity
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }

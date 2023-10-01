@@ -18,4 +18,5 @@ namespace Dgmjr.EntityFrameworkCore.Abstractions;
 public interface ITimestampable<TUserId>
     : ICreatable<TUserId>,
         IUpdatable<TUserId>,
-        IDeletable<TUserId> { }
+        IDeletable<TUserId>
+{ }

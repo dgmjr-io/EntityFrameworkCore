@@ -15,4 +15,5 @@ namespace Dgmjr.EntityFrameworkCore.Abstractions;
 /// <inheritdoc cref="ITimestampedEntity" />
 /// <typeparam name="TId"><inheritdoc cref="IEntity{TId}"/></typeparam>
 public interface ITimestampedEntity<TId> : IEntity<TId>, ITimestampedEntity
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }
