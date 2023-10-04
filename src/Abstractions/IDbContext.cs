@@ -18,7 +18,7 @@ using Microsoft.EntityFrameworkCore;
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
 /// </summary>
 
-[GenerateInterfaceAttribute(typeof(DbContext))]
+[GenerateInterface(typeof(DbContext))]
 public partial interface IDbContext
 {
 #if NET6_0_OR_GREATER

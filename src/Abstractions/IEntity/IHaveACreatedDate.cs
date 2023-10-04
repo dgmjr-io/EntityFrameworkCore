@@ -13,6 +13,6 @@ public interface ICreatable
 public interface ICreatable<TUserId>
 {
     /// <summary>Gets or sets a <see cref="ITimestamp"/> holding the details of the object's creation with the ID of the user who performed the operation.</summary>
-    /// <value><inheritdoc cref="ICreatable.Created\" /> with the ID of the user who performed the operation</value>
+    /// <value><inheritdoc cref="ICreatable.Created" /> with the ID of the user who performed the operation</value>
     ITimestamp<TUserId> Created { get; set; }
 }
