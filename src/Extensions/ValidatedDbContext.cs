@@ -1,3 +1,6 @@
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
+
 /*
  * ValidatedDbContext.cs
  *
@@ -13,16 +16,14 @@
 namespace Microsoft.EntityFrameworkCore;
 
 using Microsoft.EntityFrameworkCore.Abstractions;
+using Microsoft.EntityFrameworkCore.Extensions;
 
-public class ValidatedDbContext : DbContext, IValidatedDbContext
+public class ValidatedDbContext(DbContextOptions options) : DbContext(options), IValidatedDbContext
 {
-    public ValidatedDbContext(DbContextOptions options)
-        : base(options) { }
-
-    public override int SaveChanges()
-    {
-        return base.SaveChanges();
-    }
+    public virtual IQueryable<TEntity> FromExpression<TEntity>(
+        Expression<Func<TEntity, bool>> expression
+    )
+        where TEntity : class => Set<TEntity>().Where(expression);
 
     public override Task<int> SaveChangesAsync(
         CancellationToken cancellationToken = new CancellationToken()
@@ -32,7 +33,9 @@ public class ValidatedDbContext : DbContext, IValidatedDbContext
         return base.SaveChangesAsync(cancellationToken);
     }
 
-    public virtual void Validate()
+    public virtual IEnumerable<ValidationResult> Validate(ValidationContext context) => Validate();
+
+    public virtual IEnumerable<ValidationResult> Validate()
     {
         var changedEntities = ChangeTracker
             .Entries()
@@ -52,5 +55,7 @@ public class ValidatedDbContext : DbContext, IValidatedDbContext
                 errors
             );
         }
+
+        return errors;
     }
 }

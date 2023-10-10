@@ -1,25 +1,14 @@
-//
-//  Entity.cs
-//
-//  Authors:
-//       David G. Moore, Jr. <justin@thebackroom.app>
-//       &
-//       Municipal Drew <drew@wheatleythecat.com>
-//
-//  Copyright ©️ 2022 2022 David G. Moore, Jr.
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/*
+ * Entity{TId,TUserId}.cs
+ *
+ *   Created: 2023-10-01-08:57:29
+ *   Modified: 2023-10-10-07:12:17
+ *
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *
+ *   Copyright © 2022 - 2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
 
 namespace Dgmjr.EntityFrameworkCore.Models;
 
@@ -32,9 +21,7 @@ using Dgmjr.EntityFrameworkCore.Abstractions;
 /// <typeparam name="TUserId">The type of the user ID (for the <see cref="ITimestamp{TUserId}"/></typeparam>
 public abstract class TimestampedEntity<TId, TUserId>
     : TimestampedEntity<TId>,
-        ITimestampedEntity<TId, TUserId>,
-        IEquatable<IEntity<TId>>,
-        IComparable<IEntity<TId>>
+        ITimestampedEntity<TId, TUserId>
     where TId : IComparable, IEquatable<TId?>
 {
     public new virtual ITimestamp<TUserId> Created

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Microsoft.EntityFrameworkCore.Abstractions;
 
-[GenerateInterface(typeof(Microsoft.EntityFrameworkCore.ValidatedDbContext))]
+// [GenerateInterface(typeof(Microsoft.EntityFrameworkCore.ValidatedDbContext))]
 public interface IValidatedDbContext : IDbContext, IValidatableObject
 {
-    void Validate();
+    IEnumerable<ValidationResult> Validate();
 }
 
 public interface IValidatedDbContext<T> : IValidatedDbContext, IDbContext<T>

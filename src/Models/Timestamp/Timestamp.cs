@@ -21,6 +21,5 @@ public struct Timestamp : ITimestamp
     public DateTimeOffset When { get; set; }
     public IStringDictionary Details { get; set; }
 
-    /// <inheritdoc />
     public int Version { get; set; }
 }

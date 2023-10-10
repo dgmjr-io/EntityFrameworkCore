@@ -12,21 +12,23 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-      <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+      <TargetFrameworks>netstandard2.0;net6.0;net8.0</TargetFrameworks>
       <AssemblyName>Dgmjr.EntityFrameworkCore.Abstractions</AssemblyName>
       <PackageId>$(AssemblyName)</PackageId>
       <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     </PropertyGroup>
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" />
-      <PackageReference Include="System.Collections.Generic.Usings" />
       <PackageReference Include="Dgmjr.Abstractions" ExcludeAssets="ContentFiles" />
       <PackageReference Include="Dgmjr.Security.Constants" ExcludeAssets="ContentFiles" />
-      <PackageReference  Include="Dgmjr.InterfaceGenerator" ExcludeAssets="ContentFiles" PrivateAssets="Analyzers" />
-      <SourceGenerator  Include="Dgmjr.InterfaceGenerator.Decomposer" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" />
+      <PackageReference Include="System.Collections.Generic.Usings" />
+      <PackageReference Include="System.Text.Json" />
+      <SourceGeneratorPackageReference  Include="Dgmjr.InterfaceGenerator" />
+      <!-- <SourceGeneratorPackageReference  Include="Dgmjr.InterfaceGenerator.Decomposer" /> -->
     </ItemGroup>
     <ItemGroup>
       <Using Remove="System.Text.Json*" />
+      <Reference Include="System.Runtime" />
     </ItemGroup>
   </Project>

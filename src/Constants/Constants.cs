@@ -1,1 +1,1 @@
-namespace Dgmjr.EntityFrameworkCore;
+namespace Dgmjr.EntityFrameworkCore.Constants;

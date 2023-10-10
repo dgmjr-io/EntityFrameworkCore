@@ -20,10 +20,10 @@ public interface ITimestamp
     /// <value>the ID of the user who made the change</value>
     object? By { get; set; }
 
-    /// <value>the <see cref="DateTime"/> of the change</value>
+    /// <value>the <see cref="DateTimeOffset"/> of the change</value>
     DateTimeOffset When { get; set; }
 
-    /// <value>tn <see cref="IStringDictionary"/> of the details of the change (if any)</value>
+    /// <value>a <see cref="IStringDictionary"/> of the details of the change (if any)</value>
     IStringDictionary Details { get; set; }
 
     /// <value>the row version number of the change</value>

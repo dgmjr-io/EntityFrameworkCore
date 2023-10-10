@@ -9,6 +9,7 @@
  *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
+extern alias DgmjrSysExts;
 
 namespace Dgmjr.EntityFrameworkCore.Models;
 
@@ -22,11 +23,11 @@ using Dgmjr.EntityFrameworkCore.Abstractions;
 public abstract class Entity<TId>
     : IEntity<TId>,
         IEntity,
-        IIdentifiable<TId>,
         IEquatable<IEntity<TId>>,
         IComparable<IEntity<TId>>,
         IHaveAWritableId<TId>,
-        IHaveAWritableId
+        IHaveAWritableId,
+        IComparable
     where TId : IComparable, IEquatable<TId>
 {
     public virtual TId Id
@@ -37,22 +38,49 @@ public abstract class Entity<TId>
     object IIdentifiable.Id => Id;
     object IHaveAWritableId.Id { get; set; }
 
-    public bool Equals(IEntity? other) => GetHashCode() == other?.GetHashCode();
+    public override bool Equals(object obj) => obj is IEntity ie && Equals(ie);
+
+    public virtual bool Equals(IEntity? other) => GetHashCode() == other?.GetHashCode();
 
     public virtual bool Equals(IEntity<TId>? other) =>
-        Id.Equals(other == default ? default : (other as IIdentifiable<TId>).Id);
+        Id.Equals(other is null ? default : other.Id);
 
     public virtual int CompareTo(IEntity<TId>? other) =>
-        Id.CompareTo(other == default ? default : (other as IIdentifiable<TId>).Id);
+        Id.CompareTo(other is null ? default : other.Id);
 
     public virtual int CompareTo(IEntity? other) =>
-        CompareTo(other == default ? default : other as IEntity<TId>);
+        CompareTo(other is null ? default : other as IEntity<TId>);
 
-    public int CompareTo(object? obj) =>
+    public virtual int CompareTo(object? obj) =>
         obj is IIdentifiable oid
             ? Id.CompareTo(oid.Id)
             : throw new ArgumentException(
                 $"Object must be of type {nameof(IIdentifiable)}.",
                 nameof(obj)
             );
+
+    public override int GetHashCode() => GetType().GetHashCode() ^ Id.GetHashCode();
+
+    int IComparable.CompareTo(object obj)
+    {
+        if (obj == null)
+        {
+            return 1;
+        }
+
+        if (obj is IEntity<TId> x)
+        {
+            return CompareTo(x);
+        }
+
+        throw new ArgumentException("", nameof(obj));
+    }
+
+    public static bool operator ==(Entity<TId> @this, IEntity other) => @this.Equals(other);
+
+    public static bool operator !=(Entity<TId> @this, IEntity other) => !@this.Equals(other);
+
+    public static bool operator ==(Entity<TId> @this, object other) => @this.Equals(other);
+
+    public static bool operator !=(Entity<TId> @this, object other) => !@this.Equals(other);
 }

@@ -110,5 +110,9 @@ public enum DbType
         Description = "Database type of varbinary(MAX).",
         ShortName = "varbinary(MAX)"
     )]
-    DbTypeVarBinaryMax
+    DbTypeVarBinaryMax,
+
+    /// <summary>Database type of varbinary.</summary>
+    [Display(Name = "bit", Description = "Database type of bit.", ShortName = "bit")]
+    DbTypeBit
 }

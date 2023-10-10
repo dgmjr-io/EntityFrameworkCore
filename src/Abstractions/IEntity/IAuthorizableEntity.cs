@@ -23,6 +23,7 @@ public interface IAuthorizableEntity : IEntity
     /// Checks if the specified principal has permission perform <paramref name="operation"/> on the entity.
     /// </summary>
     /// <param name="principal">Claims principal that represents the user.</param>
+    /// <param name="operation">The operation the claims principal wishes to perform on the entity</param>
     /// <returns><see langword="true" /> if the principal has permission perform the action, <see langword="false" /> otherwise..</returns>
     bool IsAuthorized(ClaimsPrincipal principal, string operation);
 

@@ -22,7 +22,7 @@ using Dgmjr.EntityFrameworkCore.Abstractions;
 public abstract class TimestampedEntity<TId> : Entity<TId>
     where TId : IComparable, IEquatable<TId>
 {
-    public virtual TId Id
+    public new virtual TId Id
     {
         get => (TId)((IIdentifiable)this).Id;
         set => ((IHaveAWritableId)this).Id = value;
@@ -32,14 +32,14 @@ public abstract class TimestampedEntity<TId> : Entity<TId>
     public virtual ITimestamp Updated { get; set; } = new Timestamp();
     public virtual ITimestamp? Deleted { get; set; } = default(Timestamp);
 
-    public virtual int CompareTo(IEntity<TId>? other) =>
-        Id.CompareTo(other == default ? default : (other as IIdentifiable<TId>).Id);
+    public override bool Equals(IEntity? other) => Id?.Equals(other?.Id) ?? false;
 
-    public virtual bool Equals(IEntity<TId>? other) =>
+    public override bool Equals(IEntity<TId>? other) =>
         Id.Equals(other == default ? default : (other as IIdentifiable<TId>).Id);
 
-    public virtual int CompareTo(IEntity? other) =>
-        CompareTo(other == default ? default : other as IEntity<TId>);
+    public override int CompareTo(IEntity<TId>? other) =>
+        Id.CompareTo(other == default ? default : other.Id);
 
-    public bool Equals(IEntity? other) => this.Id?.Equals(other?.Id) ?? false;
+    public override int CompareTo(IEntity? other) =>
+        CompareTo(other == default ? default : other as IEntity<TId>);
 }

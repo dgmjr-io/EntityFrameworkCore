@@ -18,7 +18,6 @@ using Dgmjr.EntityFrameworkCore.Abstractions;
 /// <summary>
 /// This is an abstract base class for all Entity Framework entities.
 /// </summary>
-/// <typeparam name="TId">The type of the ID (primary key) property.</typeparam>
 public abstract class TimestampedEntity : IEntity, IEquatable<Entity>
 {
     public virtual object Id { get; set; }
@@ -26,10 +25,10 @@ public abstract class TimestampedEntity : IEntity, IEquatable<Entity>
     public virtual ITimestamp Updated { get; set; } = new Timestamp();
     public virtual ITimestamp? Deleted { get; set; } = default;
 
-    public bool Equals(Entity other) =>
-        GetType().IsAssignableFrom(other.GetType()) && Id.Equals(other.Id);
+    public override bool Equals(object? obj) => obj is Entity entity && Equals(entity);
+
+    public virtual bool Equals(Entity other) =>
+        GetType().IsInstanceOfType(other) && Id.Equals(other.Id);
 
     public override int GetHashCode() => GetType().GetHashCode() ^ Id.GetHashCode();
-
-    public override bool Equals(object? obj) => obj is Entity entity && Equals(entity);
 }

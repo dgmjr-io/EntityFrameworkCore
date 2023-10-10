@@ -12,16 +12,23 @@
 
 namespace Microsoft.EntityFrameworkCore.Abstractions;
 
-public partial interface IDbSet<TEntity> where TEntity : class
+public partial interface IDbSet<TEntity>
+    where TEntity : class
 {
     Microsoft.EntityFrameworkCore.Metadata.IEntityType EntityType { get; }
     Microsoft.EntityFrameworkCore.ChangeTracking.LocalView<TEntity> Local { get; }
     System.Linq.IQueryable<TEntity> AsQueryable();
     TEntity Find(TEntity[] keyValues);
     System.Threading.Tasks.ValueTask<TEntity> FindAsync(TEntity[] keyValues);
-    System.Threading.Tasks.ValueTask<TEntity> FindAsync(TEntity[] keyValues, System.Threading.CancellationToken cancellationToken);
+    System.Threading.Tasks.ValueTask<TEntity> FindAsync(
+        TEntity[] keyValues,
+        System.Threading.CancellationToken cancellationToken
+    );
     Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Add(TEntity entity);
-    System.Threading.Tasks.ValueTask<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>> AddAsync(TEntity entity, System.Threading.CancellationToken cancellationToken);
+    System.Threading.Tasks.ValueTask<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>> AddAsync(
+        TEntity entity,
+        System.Threading.CancellationToken cancellationToken
+    );
     Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Attach(TEntity entity);
     Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Remove(TEntity entity);
     Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Update(TEntity entity);
@@ -31,7 +38,10 @@ public partial interface IDbSet<TEntity> where TEntity : class
     void RemoveRange(TEntity[] entities);
     void UpdateRange(TEntity[] entities);
     void AddRange(System.Collections.Generic.IEnumerable<TEntity> entities);
-    System.Threading.Tasks.Task AddRangeAsync(System.Collections.Generic.IEnumerable<TEntity> entities, System.Threading.CancellationToken cancellationToken);
+    System.Threading.Tasks.Task AddRangeAsync(
+        System.Collections.Generic.IEnumerable<TEntity> entities,
+        System.Threading.CancellationToken cancellationToken
+    );
     void AttachRange(System.Collections.Generic.IEnumerable<TEntity> entities);
     void RemoveRange(System.Collections.Generic.IEnumerable<TEntity> entities);
     void UpdateRange(System.Collections.Generic.IEnumerable<TEntity> entities);
