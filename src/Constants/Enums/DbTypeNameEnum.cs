@@ -114,5 +114,9 @@ public enum DbType
 
     /// <summary>Database type of varbinary.</summary>
     [Display(Name = "bit", Description = "Database type of bit.", ShortName = "bit")]
-    DbTypeBit
+    DbTypeBit,
+
+    /// <summary>Database type of varbinary.</summary>
+    [Display(Name = "uniqueidentifier", Description = "Database type of uniqueidentifier.", ShortName = "uniqueidentifier")]
+    UniqueIdentifier
 }
