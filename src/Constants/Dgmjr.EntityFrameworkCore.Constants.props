@@ -14,7 +14,7 @@
   <ItemGroup>
     <Using Include="Dgmjr.EntityFrameworkCore" />
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants"  /> -->
-    <Using Include="Dgmjr.EntityFrameworkCore.DbTypes" Static="true" />
+    <Using Include="Dgmjr.EntityFrameworkCore.DbTypeNames" Static="true" />
     <Using Include="Dgmjr.EntityFrameworkCore.DbSchemas" Static="true" />
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants.DbTypeNames" Static="true" /> -->
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants.Schemas" Static="true" /> -->

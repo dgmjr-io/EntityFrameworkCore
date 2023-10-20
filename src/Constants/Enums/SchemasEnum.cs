@@ -42,4 +42,7 @@ public enum SchemasEnum
 
     [Display(Name = "Identity Schema", ShortName = "id", Description = "The id schema")]
     IdentitySchema,
+
+    [Display(Name = "Guest Schema", ShortName = "guest", Description = "The guest schema")]
+    GuestSchema,
 }

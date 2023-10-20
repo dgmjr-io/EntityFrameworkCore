@@ -1,24 +1,24 @@
 namespace Dgmjr.EntityFrameworkCore.Enums;
 
 /// <summary>Enum representing database type names, with each enum value having a corresponding string value represented by the Display attribute.</summary>
-[GenerateEnumerationRecordStruct("DbTypes", "Dgmjr.EntityFrameworkCore")]
-public enum DbType
+[GenerateEnumerationRecordStruct("DbTypeNames", "Dgmjr.EntityFrameworkCore")]
+public enum DbTypeNames
 {
     /// <summary>Database type of bigint.</summary>
     [Display(Name = "bigint", Description = "Database type of bigint.", ShortName = "bigint")]
-    DbTypeBigInt,
+    BigInt,
 
     /// <summary>Database type of int.</summary>
     [Display(Name = "int", Description = "Database type of int.", ShortName = "int")]
-    DbTypeInt,
+    Int,
 
     /// <summary>Database type of byte.</summary>
     [Display(Name = "byte", Description = "Database type of byte.", ShortName = "byte")]
-    DbTypeByte,
+    Byte,
 
     /// <summary>Database type of varchar.</summary>
     [Display(Name = "varchar", Description = "Database type of varchar.", ShortName = "varchar")]
-    DbTypeVarChar,
+    VarChar,
 
     /// <summary>Database type of varchar(MAX).</summary>
     [Display(
@@ -26,11 +26,11 @@ public enum DbType
         Description = "Database type of varchar(MAX).",
         ShortName = "varchar(MAX)"
     )]
-    DbTypeVarCharMax,
+    VarCharMax,
 
     /// <summary>Database type of nvarchar.</summary>
     [Display(Name = "nvarchar", Description = "Database type of nvarchar.", ShortName = "nvarchar")]
-    DbTypeNVarChar,
+    NVarChar,
 
     /// <summary>Database type of nvarchar(MAX).</summary>
     [Display(
@@ -38,11 +38,11 @@ public enum DbType
         Description = "Database type of nvarchar(MAX).",
         ShortName = "nvarchar(MAX)"
     )]
-    DbTypeNVarCharMax,
+    NVarCharMax,
 
     /// <summary>Database type of nchar.</summary>
     [Display(Name = "nchar", Description = "Database type of nchar.", ShortName = "nchar")]
-    DbTypeNChar,
+    NChar,
 
     /// <summary>Database type of nchar(X).</summary>
     [Display(
@@ -50,11 +50,11 @@ public enum DbType
         Description = "Database type of nchar(X).",
         ShortName = "nchar({0})"
     )]
-    DbTypeNCharX,
+    NCharX,
 
     /// <summary>Database type of char.</summary>
     [Display(Name = "char", Description = "Database type of char.", ShortName = "char")]
-    DbTypeChar,
+    Char,
 
     /// <summary>Database type of char(X).</summary>
     [Display(
@@ -62,11 +62,11 @@ public enum DbType
         Description = "Database type of char(X).",
         ShortName = "char({0})"
     )]
-    DbTypeCharX,
+    CharX,
 
     /// <summary>Database type of tinyint.</summary>
     [Display(Name = "tinyint", Description = "Database type of tinyint.", ShortName = "tinyint")]
-    DbTypeTinyInt,
+    TinyInt,
 
     /// <summary>Database row version type.</summary>
     [Display(
@@ -74,19 +74,19 @@ public enum DbType
         Description = "Database row version type.",
         ShortName = "rowversion"
     )]
-    DbTypeRowVersion,
+    RowVersion,
 
     /// <summary>Database type of datetime.</summary>
     [Display(Name = "datetime", Description = "Database type of datetime.", ShortName = "datetime")]
-    DbTypeDateTime,
+    SqlDateTime,
 
     /// <summary>Database type of date.</summary>
     [Display(Name = "date", Description = "Database type of date.", ShortName = "date")]
-    DbTypeDate,
+    Date,
 
     /// <summary>Database type of time.</summary>
     [Display(Name = "time", Description = "Database type of time.", ShortName = "time")]
-    DbTypeTime,
+    Time,
 
     /// <summary>Database type of datetime.</summary>
     [Display(
@@ -94,7 +94,7 @@ public enum DbType
         Description = "Database type of datetimeoffset.",
         ShortName = "datetimeoffset"
     )]
-    DbTypeDateTimeOffset,
+    SqlDateTimeOffset,
 
     /// <summary>Database type of varbinary.</summary>
     [Display(
@@ -102,7 +102,7 @@ public enum DbType
         Description = "Database type of varbinary.",
         ShortName = "varbinary"
     )]
-    DbTypeVarBinary,
+    VarBinary,
 
     /// <summary>Database type of varbinary.</summary>
     [Display(
@@ -110,13 +110,17 @@ public enum DbType
         Description = "Database type of varbinary(MAX).",
         ShortName = "varbinary(MAX)"
     )]
-    DbTypeVarBinaryMax,
+    VarBinaryMax,
 
     /// <summary>Database type of varbinary.</summary>
     [Display(Name = "bit", Description = "Database type of bit.", ShortName = "bit")]
-    DbTypeBit,
+    Bit,
 
     /// <summary>Database type of varbinary.</summary>
-    [Display(Name = "uniqueidentifier", Description = "Database type of uniqueidentifier.", ShortName = "uniqueidentifier")]
+    [Display(
+        Name = "uniqueidentifier",
+        Description = "Database type of uniqueidentifier.",
+        ShortName = "uniqueidentifier"
+    )]
     UniqueIdentifier
 }
