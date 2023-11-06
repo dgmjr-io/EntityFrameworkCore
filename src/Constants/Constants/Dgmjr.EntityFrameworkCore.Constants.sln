@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B283EBC2-E01F-412D-9339-FD56EF114549}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Directory.Build.props = ..\..\..\..\..\Directory.Build.props
+		..\..\..\..\..\Directory.Build.targets = ..\..\..\..\..\Directory.Build.targets
+		..\..\..\..\..\global.json = ..\..\..\..\..\global.json
+		..\..\..\..\..\Packages\Versions.Local.props = ..\..\..\..\..\Packages\Versions.Local.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.EntityFrameworkCore.Constants", "Dgmjr.EntityFrameworkCore.Constants.csproj", "{BE0B5D2B-890E-4288-89B4-662F656CEDEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Local|Any CPU.Build.0 = Local|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Production|Any CPU.ActiveCfg = Local|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Production|Any CPU.Build.0 = Local|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89FED99A-9BE5-468A-9A78-F23306B9D3B9}
+	EndGlobalSection
+EndGlobal

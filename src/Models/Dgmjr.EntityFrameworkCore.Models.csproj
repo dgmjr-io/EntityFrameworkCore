@@ -19,7 +19,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
     <PackageReference Include="System.Collections.Generic.Usings" />
     <ProjectReference Include="../Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" />
-    <UsingsPackageReference Include="System.ComponentModel.Usings" />
+    <PackageReference Include="System.ComponentModel.Usings" IncludeAssets="Build;BuildTransitive;BuildMultitargeting;Runtime;Compile" ExcludeAssets="ContentFiles;Native;Analyzers" PrivateAssets="None" />
     <!-- <PackageReference Include="System.Runtime" Condition="$(TargetFramework.Contains('netstandard'))" /> -->
   </ItemGroup>
   <ItemGroup>

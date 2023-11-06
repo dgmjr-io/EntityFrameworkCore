@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Constants/Dgmjr.EntityFrameworkCore.Constants.csproj" Properties="PackageVersionOverride=$(PackageVersion)" />
+    <ProjectReference Include="../DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj" Properties="PackageVersionOverride=$(PackageVersion)" />
+  </ItemGroup>
+</Project>

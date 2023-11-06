@@ -1,0 +1,17 @@
+<!--
+ * Dgmjr.EntityFrameworkCore.Extensions.props
+ *
+ *   Created: 2023-22-31T19:22:39-04:00
+ *   Modified: 2023-22-31T19:22:40-04:00
+ *
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *
+ *   Copyright © 2022 - 2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemGroup>
+    <Using Include="Microsoft.EntityFrameworkCore.Extensions" />
+  </ItemGroup>
+</Project>

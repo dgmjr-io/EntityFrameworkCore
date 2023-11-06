@@ -24,8 +24,8 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore" />
       <PackageReference Include="System.Collections.Generic.Usings" />
       <PackageReference Include="System.Text.Json" />
-      <SourceGeneratorPackageReference  Include="Dgmjr.InterfaceGenerator" />
-      <!-- <SourceGeneratorPackageReference  Include="Dgmjr.InterfaceGenerator.Decomposer" /> -->
+      <PackageReference Include="Dgmjr.InterfaceGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
+      <!-- <PackageReference Include="Dgmjr.InterfaceGenerator.Decomposer" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" /> -->
     </ItemGroup>
     <ItemGroup>
       <Using Remove="System.Text.Json*" />

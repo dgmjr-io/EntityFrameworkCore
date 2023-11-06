@@ -13,17 +13,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
-    <IsPackable>true</IsPackable>
-    <IsNuGetized>true</IsNuGetized>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <EnableCentralPackageVersions>true</EnableCentralPackageVersions>
-    <EnableFluentBuilder>false</EnableFluentBuilder>
-    <AssemblyName>Dgmjr.EntityFrameworkCore.Constants</AssemblyName>
-    <PackageId>$(AssemblyName)</PackageId>
-    <ImplicitUsings>true</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <SourceGeneratorPackageReference Include="Dgmjr.Enumerations.CodeGenerator" />
+    <PackageReference Include="Dgmjr.Enumerations.CodeGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
     <PackageReference Include="System.ComponentModel.Annotations" />
     <PackageReference Include="System.ComponentModel.Usings" />
     <PackageReference Include="Dgmjr.ComponentModel" />

@@ -8,3 +8,8 @@ public class Entity<TId> : IIdentifiable<TId>
 {
     public TId Id { get; set; }
 }
+
+public class Entity : IIdentifiable
+{
+    public object Id { get; set; }
+}

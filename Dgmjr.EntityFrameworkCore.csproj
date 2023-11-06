@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="./src/Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" Propertoes="TargetFrameworks=net8.0" />
+    <ProjectReference Include="./src/Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" Properties="TargetFrameworks=net8.0" />
     <ProjectReference Include="./src/Constants/Dgmjr.EntityFrameworkCore.Constants.csproj" />
     <ProjectReference Include="./src/Extensions/Dgmjr.EntityFrameworkCore.Extensions.csproj" />
     <ProjectReference Include="./src/Entities/Dgmjr.EntityFrameworkCore.Entities.csproj" />
@@ -28,7 +28,7 @@
 
   <!-- <ItemGroup>
     <Reference Include="Dgmjr.EntityFrameworkCore.Abstractions" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
-    <Reference Include="Dgmjr.EntityFrameworkCore.Constants" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
+    <Reference Include="Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
     <Reference Include="Dgmjr.EntityFrameworkCore.Extensions" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
     <Reference Include="Dgmjr.EntityFrameworkCore.Entities" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
     <Reference Include="Dgmjr.EntityFrameworkCore.Models" HintPath="./src/Abstractions/bin/$(Configuration)/$(TargetFramework)" />
@@ -40,7 +40,7 @@
 
   <!-- <Target Name="Build">
     <MSBuild Projects="./src/Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" Properties="TargetFrameworks=netstandard2.0;net6.0" />
-    <MSBuild Projects="./src/Constants/Dgmjr.EntityFrameworkCore.Constants.csproj" Properties="TargetFrameworks=netstandard2.0" />
+    <MSBuild Projects="./src/Constants/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj" Properties="TargetFrameworks=netstandard2.0" />
     <MSBuild Projects="./src/Extensions/Dgmjr.EntityFrameworkCore.Extensions.csproj" Properties="TargetFrameworks=netstandard2.0;netstandard2.1;net6.0;net8.0" />
     <MSBuild Projects="./src/Entities/Dgmjr.EntityFrameworkCore.Entities.csproj" Properties="TargetFrameworks=netstandard2.0" />
     <MSBuild Projects="./src/Models/Dgmjr.EntityFrameworkCore.Models.csproj" Properties="TargetFrameworks=netstandard2.0" />

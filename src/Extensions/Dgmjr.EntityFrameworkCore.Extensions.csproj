@@ -19,7 +19,7 @@
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
   </PropertyGroup>
   <ItemGroup>
-		<SourceGenerator  Include="Dgmjr.InterfaceGenerator" />
+		<PackageReference Include="Dgmjr.InterfaceGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
 		<PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />

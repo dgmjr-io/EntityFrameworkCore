@@ -73,7 +73,7 @@ public abstract class Entity<TId>
             return CompareTo(x);
         }
 
-        throw new ArgumentException("", nameof(obj));
+        throw new ArgumentException($"Object of type {obj.GetType()} is not allowed.", nameof(obj));
     }
 
     public static bool operator ==(Entity<TId> @this, IEntity other) => @this.Equals(other);
