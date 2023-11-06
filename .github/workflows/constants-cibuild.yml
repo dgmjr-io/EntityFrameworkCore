@@ -66,4 +66,4 @@ jobs:
         repo: dgmjr-io/Dgmjr.EntityFrameworkCore
         push-nuget: false
         push-dgmjr-io: true
-        push-github: true
+        push-github: false
