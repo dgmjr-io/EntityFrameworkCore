@@ -21,7 +21,6 @@
     <PackageReference Include="Dgmjr.ComponentModel" />
     <PackageReference Include="Dgmjr.Enumerations.Abstractions" />
     <PackageReference Include="Dgmjr.Abstractions" />
-    <PackageReference Include="Dgmjr.Primitives" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="System.Reflection" />

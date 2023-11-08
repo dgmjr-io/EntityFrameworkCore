@@ -1,0 +1,56 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B283EBC2-E01F-412D-9339-FD56EF114549}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Directory.Build.props = ..\..\..\..\Directory.Build.props
+		..\..\..\..\Directory.Build.targets = ..\..\..\..\Directory.Build.targets
+		..\..\..\..\global.json = ..\..\..\..\global.json
+		..\..\..\..\Packages\Versions.Local.props = ..\..\..\..\Packages\Versions.Local.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas", "..\Constants\DbTypesNamesAndSchemas\Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj", "{06535008-E6CA-4052-B33B-727386835884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.EntityFrameworkCore.Migrations", "Dgmjr.EntityFrameworkCore.Migrations.csproj", "{CBEC6380-04EC-404C-9CEB-D304E7C449D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06535008-E6CA-4052-B33B-727386835884}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Local|Any CPU.Build.0 = Local|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Production|Any CPU.ActiveCfg = Local|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Production|Any CPU.Build.0 = Local|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06535008-E6CA-4052-B33B-727386835884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Local|Any CPU.Build.0 = Local|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Production|Any CPU.ActiveCfg = Local|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Production|Any CPU.Build.0 = Local|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEC6380-04EC-404C-9CEB-D304E7C449D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC917023-AFB2-45BE-9C48-4FC82517A9BE}
+	EndGlobalSection
+EndGlobal

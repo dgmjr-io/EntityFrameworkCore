@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\..\..\Packages\Versions.Local.props = ..\..\..\..\..\Packages\Versions.Local.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.EntityFrameworkCore.Constants", "Dgmjr.EntityFrameworkCore.Constants.csproj", "{BE0B5D2B-890E-4288-89B4-662F656CEDEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dgmjr.EntityFrameworkCore.Constants", "Dgmjr.EntityFrameworkCore.Constants.csproj", "{CAB36B11-394F-4B53-B263-CD3C21D695D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,18 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Local|Any CPU.ActiveCfg = Local|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Local|Any CPU.Build.0 = Local|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Testing|Any CPU.Build.0 = Testing|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Production|Any CPU.ActiveCfg = Local|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Production|Any CPU.Build.0 = Local|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE0B5D2B-890E-4288-89B4-662F656CEDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Local|Any CPU.Build.0 = Local|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Production|Any CPU.ActiveCfg = Local|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Production|Any CPU.Build.0 = Local|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB36B11-394F-4B53-B263-CD3C21D695D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
+    <ProjectReference Include="../Constants/DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Dgmjr.EntityFrameworkCore.Migrations.Constants" Static="true" />
+  </ItemGroup>
+</Project>

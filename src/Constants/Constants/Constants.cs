@@ -17,3 +17,8 @@ public static class Prefixes
     public const string uq_ = nameof(uq_);
     public const string ch_ = nameof(ch_);
 }
+
+public static class UriMaxLengthConstant
+{
+    public const int UriMaxLength = 2048;
+}
