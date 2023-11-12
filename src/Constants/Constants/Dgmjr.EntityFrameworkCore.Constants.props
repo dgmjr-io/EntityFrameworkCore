@@ -15,6 +15,7 @@
     <Using Include="Dgmjr.EntityFrameworkCore" />
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants"  /> -->
     <Using Include="Dgmjr.EntityFrameworkCore.Constants.Prefixes" Static="true" />
+    <Using Include="Dgmjr.EntityFrameworkCore.Constants.Suffixes" Static="true" />
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants.DbTypeNames" Static="true" /> -->
     <!-- <Using Include="Dgmjr.EntityFrameworkCore.Constants.Schemas" Static="true" /> -->
   </ItemGroup>

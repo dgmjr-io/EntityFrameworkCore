@@ -18,6 +18,11 @@ public static class Prefixes
     public const string ch_ = nameof(ch_);
 }
 
+public static class Suffixes
+{
+    public const string _sql = ".sql";
+}
+
 public static class UriMaxLengthConstant
 {
     public const int UriMaxLength = 2048;

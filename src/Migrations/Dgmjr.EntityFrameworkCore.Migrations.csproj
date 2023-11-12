@@ -4,9 +4,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Dgmjr.EntityFrameworkCore.Constants.All" />
     <ProjectReference Include="../Constants/DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Dgmjr.EntityFrameworkCore.Migrations.Constants" Static="true" />
+    <Using Include="Dgmjr.EntityFrameworkCore.DbSchemas" Static="true" />
   </ItemGroup>
+  <Import Project="../Constants/DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.props" />
 </Project>
