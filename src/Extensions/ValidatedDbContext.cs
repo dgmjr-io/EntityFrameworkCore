@@ -25,37 +25,37 @@ public class ValidatedDbContext(DbContextOptions options) : DbContext(options), 
     )
         where TEntity : class => Set<TEntity>().Where(expression);
 
-    public override Task<int> SaveChangesAsync(
-        CancellationToken cancellationToken = new CancellationToken()
-    )
+public override Task<int> SaveChangesAsync(
+    CancellationToken cancellationToken = new CancellationToken()
+)
+{
+    Validate();
+    return base.SaveChangesAsync(cancellationToken);
+}
+
+public virtual IEnumerable<ValidationResult> Validate(ValidationContext context) => Validate();
+
+public virtual IEnumerable<ValidationResult> Validate()
+{
+    var changedEntities = ChangeTracker
+        .Entries()
+        .Where(_ => _.State == EntityState.Added || _.State == EntityState.Modified);
+
+    var errors = new List<ValidationResult>(); // all errors are here
+    foreach (var e in changedEntities)
     {
-        Validate();
-        return base.SaveChangesAsync(cancellationToken);
+        var vc = new ValidationContext(e.Entity, null, null);
+        Validator.TryValidateObject(e.Entity, vc, errors, validateAllProperties: true);
     }
 
-    public virtual IEnumerable<ValidationResult> Validate(ValidationContext context) => Validate();
-
-    public virtual IEnumerable<ValidationResult> Validate()
+    if (errors.Any())
     {
-        var changedEntities = ChangeTracker
-            .Entries()
-            .Where(_ => _.State == EntityState.Added || _.State == EntityState.Modified);
-
-        var errors = new List<ValidationResult>(); // all errors are here
-        foreach (var e in changedEntities)
-        {
-            var vc = new ValidationContext(e.Entity, null, null);
-            Validator.TryValidateObject(e.Entity, vc, errors, validateAllProperties: true);
-        }
-
-        if (errors.Any())
-        {
-            throw new DbEntityValidationException(
-                "Validation failed for one or more entities.",
-                errors
-            );
-        }
-
-        return errors;
+        throw new DbEntityValidationException(
+            "Validation failed for one or more entities.",
+            errors
+        );
     }
+
+    return errors;
+}
 }
