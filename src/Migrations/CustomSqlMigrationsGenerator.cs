@@ -25,7 +25,7 @@ public class CustomSqlMigrationsGenerator(
 #error "Unsupported target framework"
 #endif
 {
-    protected ISqlGenerationHelper SqlHelper => Dependencies.SqlGenerationHelper;
+    private ISqlGenerationHelper SqlHelper => Dependencies.SqlGenerationHelper;
 
     protected override void Generate(
         MigrationOperation operation,
