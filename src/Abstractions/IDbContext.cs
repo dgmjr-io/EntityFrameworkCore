@@ -18,7 +18,7 @@ using Microsoft.EntityFrameworkCore;
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
 /// </summary>
 // [GenerateInterface(typeof(DbContext))]
-public partial interface IDbContext
+public partial interface IDbContext : IDisposable, IAsyncDisposable
 {
     global::Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade Database { get; }
     global::Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker ChangeTracker { get; }
@@ -41,8 +41,6 @@ public partial interface IDbContext
         global::System.Threading.CancellationToken cancellationToken =
             default(global::System.Threading.CancellationToken)
     );
-    void Dispose();
-    global::System.Threading.Tasks.ValueTask DisposeAsync();
     global::Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Entry<TEntity>(
         TEntity entity
     )
