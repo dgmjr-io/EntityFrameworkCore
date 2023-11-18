@@ -1,10 +1,10 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: CI Build (Constants)
+name: CI Build
 
 concurrency:
-  group: CI-build (Constants)
+  group: CI-build
   cancel-in-progress: true
 
 on:
@@ -19,7 +19,7 @@ permissions:
   repository-projects: read
 
 jobs:
-  build-constants:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -33,26 +33,10 @@ jobs:
         private-nuget-endpoint: ${{ vars.PROGET_ENDPOINT_URL }}
         private-nuget-api-key: ${{ secrets.PROGET_API_KEY }}
         repo: dgmjr-io/Dgmjr.EntityFrameworkCore
-        project-file-path: src/Constants/Constants/Dgmjr.EntityFrameworkCore.Constants.csproj
-        
-  build-DbTypesNamesAndSchemas:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Build using DgmjrSdk
-      uses: dgmjr-actions/build-using-dgmjrsdk@main
-      with:
-        git-token: ${{ secrets.GITHUB_TOKEN }}
-        environment: Release
-        git-nuget-endpoint: ${{ vars.GIT_NUGET_ENDPOINT }}
-        private-nuget-endpoint: ${{ vars.PROGET_ENDPOINT_URL }}
-        private-nuget-api-key: ${{ secrets.PROGET_API_KEY }}
-        repo: dgmjr-io/Dgmjr.EntityFrameworkCore
-        project-file-path: src/Constants/DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj
-
+        project-file-path: src/All/Dgmjr.EntityFrameworkCore.csproj
+      
   nuget-push:
-    needs: [build-constants, build-DbTypesNamesAndSchemas]
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Run nuget-push
@@ -66,4 +50,4 @@ jobs:
         repo: dgmjr-io/Dgmjr.EntityFrameworkCore
         push-nuget: false
         push-dgmjr-io: true
-        push-github: false
+        push-github: true
