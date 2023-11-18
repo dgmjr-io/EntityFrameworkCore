@@ -1,0 +1,10 @@
+<Project>
+  <ItemGroup>
+    <Using Include="Dgmjr.EntityFrameworkCore.Migrations" />
+    <Using Include="Microsoft.EntityFrameworkCore.Migrations" />
+    <Using Include="Microsoft.EntityFrameworkCore.Migrations.Operations" />
+    <Using Include="Microsoft.EntityFrameworkCore.Storage" />
+    <Using Include="Microsoft.EntityFrameworkCore.Update" />
+    <Using Include="Microsoft.EntityFrameworkCore.Metadata" />
+  </ItemGroup>
+</Project>

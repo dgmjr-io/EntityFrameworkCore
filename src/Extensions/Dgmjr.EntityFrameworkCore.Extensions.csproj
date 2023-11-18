@@ -12,7 +12,7 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <!-- <TargetFramework>netstandard2.0</TargetFramework> -->
     <AssemblyName>Dgmjr.EntityFrameworkCore.Extensions</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
@@ -20,16 +20,18 @@
   </PropertyGroup>
   <ItemGroup>
 		<PackageReference Include="Dgmjr.InterfaceGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
-		<PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="Dgmjr.System.Extensions" VersionOverride="0.0.1-Local" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
-    <PackageReference Include="System.Text.Json.Usings" />
     <PackageReference Include="System.ComponentModel.Usings" />
-    <PackageReference Include="Dgmjr.System.Extensions" VersionOverride="0.0.1-Local" />
-    <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="System.Text.Json.Usings" />
+  </ItemGroup>
+  <ItemGroup>
     <!-- <ProjectReference Include="../../../Types/src/Extensions/Dgmjr.System.Extensions.csproj" />
     <ProjectReference Include="../../../Types/src/Core/Abstractions/Dgmjr.Abstractions.csproj" /> -->
+		<ProjectReference Include="../Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" />
   </ItemGroup>
 </Project>

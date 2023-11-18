@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+    <Description>This is a metapackage of all of the DGMJR EntityFrameworkCore packages</Description>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../Abstractions/Dgmjr.EntityFrameworkCore.Abstractions.csproj" />
     <ProjectReference Include="../Constants/All/Dgmjr.EntityFrameworkCore.Constants.All.csproj" />
-    <ProjectReference Include="../Extensions/Dgmjr.EntityFrameworkCore.Extensions.csproj" />
+    <ProjectReference Include="../Extensions/Dgmjr.EntityFrameworkCore.Extensions.csproj" Condition="'$(TargetFramework)' == 'net6.0' Or '$(TargetFramework)' == 'net8.0'" />
     <ProjectReference Include="../Migrations/Dgmjr.EntityFrameworkCore.Migrations.csproj" />
     <ProjectReference Include="../Models/Dgmjr.EntityFrameworkCore.Models.csproj" />
   </ItemGroup>
