@@ -21,4 +21,5 @@ public interface IValidatedDbContext : IDbContext, IValidatableObject
 }
 
 public interface IValidatedDbContext<T> : IValidatedDbContext, IDbContext<T>
-    where T : IValidatedDbContext<T> { }
+    where T : IValidatedDbContext<T>
+{ }
