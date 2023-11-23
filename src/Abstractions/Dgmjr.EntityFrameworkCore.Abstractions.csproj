@@ -16,6 +16,19 @@
       <AssemblyName>Dgmjr.EntityFrameworkCore.Abstractions</AssemblyName>
       <PackageId>$(AssemblyName)</PackageId>
       <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+      <Description>Contains a bunch of "abstractions" for working with EntityFrameworkCore, specifically:
+      ## Interfaces for DbContexts
+        - [IDbContext](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IDbContext.cs)
+        - [IDbSet](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IDbSet{T}.cs)
+        - [IHaveADbContext](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IHaveADbContext.cs)
+        - [IHaveADbContext{TContext}](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IHaveADbContext{TContext}.cs)
+        - [IValidatableDbContext](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IValidatableDbContext.cs)
+        - [IValidatableDbContext{TSelf}](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IValidatableDbContext{TSelf}.cs)
+      ## Interfaces for Entities
+        - [IEntity](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IEntity/IEntity.cs)
+        - [IEntity{TId}](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IEntity/IEntity{TId}.cs)
+        - [IEntity{TSelf,TId}](https://github.com/dgmjr-io/EntityFrameworkCore/blob/main/src/Abstractions/IEntity/IEntity{TSelf,TId}.cs)
+      </Description>
     </PropertyGroup>
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
