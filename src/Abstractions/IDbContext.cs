@@ -15,76 +15,76 @@ namespace Microsoft.EntityFrameworkCore.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 /// <summary>An abstraction (interface) for a <see cref="DbContext" />.</summary>
-public partial interface IDbContext : IDisposable, IAsyncDisposable
+public partial interface IDbContext //: IAsyncDisposable
 {
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry Add(object entity);
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Add<TEntity>(TEntity entity)
+    EntityEntry Add(object entity);
+    EntityEntry<TEntity> Add<TEntity>(TEntity entity)
         where TEntity : class;
     void AddRange(params object[] entities);
-    void AddRange(System.Collections.Generic.IEnumerable<object> entities);
-    System.Threading.Tasks.ValueTask<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry> AddAsync(
+    void AddRange(IEnumerable<object> entities);
+    ValueTask<EntityEntry> AddAsync(
         object entity,
-        System.Threading.CancellationToken cancellationToken = default
+        CancellationToken cancellationToken = default
     );
-    System.Threading.Tasks.ValueTask<Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>> AddAsync<TEntity>(
+    ValueTask<EntityEntry<TEntity>> AddAsync<TEntity>(
         TEntity entity,
-        System.Threading.CancellationToken cancellationToken = default
+        CancellationToken cancellationToken = default
     )
         where TEntity : class;
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry Attach(object entity);
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Attach<TEntity>(
+    EntityEntry Attach(object entity);
+    EntityEntry<TEntity> Attach<TEntity>(
         TEntity entity
     )
         where TEntity : class;
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Entry<TEntity>(TEntity entity)
+    EntityEntry<TEntity> Entry<TEntity>(TEntity entity)
         where TEntity : class;
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry Entry(object entity);
-    object? Find(System.Type entityType, params object[] keyValues);
+    EntityEntry Entry(object entity);
+    object? Find(type entityType, params object[] keyValues);
     TEntity? Find<TEntity>(params object[] keyValues)
         where TEntity : class;
-    System.Threading.Tasks.ValueTask<object?> FindAsync(
-        System.Type entityType,
+    ValueTask<object?> FindAsync(
+        type entityType,
         params object[] keyValues
     );
-    System.Threading.Tasks.ValueTask<TEntity?> FindAsync<TEntity>(params object[] keyValues)
+    ValueTask<TEntity?> FindAsync<TEntity>(params object[] keyValues)
         where TEntity : class;
-    System.Threading.Tasks.ValueTask<TEntity?> FindAsync<TEntity>(
+    ValueTask<TEntity?> FindAsync<TEntity>(
         object[] keyValues,
-        System.Threading.CancellationToken cancellationToken
+        CancellationToken cancellationToken
     )
         where TEntity : class;
-    Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade Database { get; }
-    Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker ChangeTracker { get; }
-    Microsoft.EntityFrameworkCore.Metadata.IModel Model { get; }
-    Microsoft.EntityFrameworkCore.DbContextId ContextId { get; }
+    DatabaseFacade Database { get; }
+    ChangeTracker ChangeTracker { get; }
+    IModel Model { get; }
+    DbContextId ContextId { get; }
     int SaveChanges();
     int SaveChanges(bool acceptAllChangesOnSuccess);
-    System.Threading.Tasks.Task<int> SaveChangesAsync(
-        System.Threading.CancellationToken cancellationToken = default
+    Task<int> SaveChangesAsync(
+        CancellationToken cancellationToken = default
     );
-    System.Threading.Tasks.Task<int> SaveChangesAsync(
+    Task<int> SaveChangesAsync(
         bool acceptAllChangesOnSuccess,
-        System.Threading.CancellationToken cancellationToken = default
+        CancellationToken cancellationToken = default
     );
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry Remove(object entity);
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Remove<TEntity>(
+    EntityEntry Remove(object entity);
+    EntityEntry<TEntity> Remove<TEntity>(
         TEntity entity
     )
         where TEntity : class;
     void RemoveRange(params object[] entities);
-    void RemoveRange(System.Collections.Generic.IEnumerable<object> entities);
+    void RemoveRange(IEnumerable<object> entities);
     void UpdateRange(params object[] entities);
-    void UpdateRange(System.Collections.Generic.IEnumerable<object> entities);
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry Update(object entity);
-    Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity> Update<TEntity>(
+    void UpdateRange(IEnumerable<object> entities);
+    EntityEntry Update(object entity);
+    EntityEntry<TEntity> Update<TEntity>(
         TEntity entity
     )
         where TEntity : class;
 
 #if NET6_0_OR_GREATER
-    Microsoft.EntityFrameworkCore.DbSet<TEntity> Set<TEntity>()
+    DbSet<TEntity> Set<TEntity>()
         where TEntity : class;
-    Microsoft.EntityFrameworkCore.DbSet<TEntity> Set<TEntity>(string name)
+    DbSet<TEntity> Set<TEntity>(string name)
         where TEntity : class;
     System.Linq.IQueryable<TResult> FromExpression<TResult>(
         System.Linq.Expressions.Expression<System.Func<System.Linq.IQueryable<TResult>>> expression

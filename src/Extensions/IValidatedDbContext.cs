@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 /*
  * IValidatedDbContext.cs
  *
@@ -13,6 +11,7 @@ using System.ComponentModel.DataAnnotations;
  */
 
 namespace Microsoft.EntityFrameworkCore.Abstractions;
+using System.ComponentModel.DataAnnotations;
 
 // [GenerateInterface(typeof(Microsoft.EntityFrameworkCore.ValidatedDbContext))]
 public interface IValidatedDbContext : IDbContext, IValidatableObject
@@ -21,4 +20,4 @@ public interface IValidatedDbContext : IDbContext, IValidatableObject
 }
 
 public interface IValidatedDbContext<T> : IValidatedDbContext, IDbContext<T>
-    where T : IValidatedDbContext<T> { }
+    where T : IValidatedDbContext<T>;

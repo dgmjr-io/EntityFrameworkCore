@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Dgmjr.Enumerations.CodeGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
+    <PackageReference Include="Dgmjr.Enumerations.CodeGenerator" IncludeAssets="Analyzers;Build;Runtime;Compile" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles" PrivateAssets="Analyzers" />
     <PackageReference Include="System.ComponentModel.Annotations" />
     <PackageReference Include="System.ComponentModel.Usings" />
     <PackageReference Include="Dgmjr.ComponentModel" />
