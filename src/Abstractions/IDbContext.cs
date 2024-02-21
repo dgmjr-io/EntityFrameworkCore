@@ -14,6 +14,9 @@ namespace Microsoft.EntityFrameworkCore.Abstractions;
 
 using Microsoft.EntityFrameworkCore;
 
+// [GenerateInterface(typeof(DbContext))]
+// public partial interface IDbContext { }
+
 /// <summary>An abstraction (interface) for a <see cref="DbContext" />.</summary>
 public partial interface IDbContext //: IAsyncDisposable
 {

@@ -21,6 +21,7 @@
     <PackageReference Include="System.Collections.Generic.Usings" IncludeAssets="Build;BuildTransitive;BuildMultitargeting;Runtime;Compile" ExcludeAssets="ContentFiles;Native;Analyzers" PrivateAssets="None"  />
     <PackageReference Include="System.ComponentModel.Usings" IncludeAssets="Build;BuildTransitive;BuildMultitargeting;Runtime;Compile" ExcludeAssets="ContentFiles;Native;Analyzers" PrivateAssets="None" />
     <!-- <PackageReference Include="System.Runtime" Condition="$(TargetFramework.Contains('netstandard'))" /> -->
+    <PackageReference Include="Vogen" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Dgmjr.EntityFrameworkCore.Abstractions" />

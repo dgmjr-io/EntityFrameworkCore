@@ -22,7 +22,7 @@
 		<PackageReference Include="Dgmjr.InterfaceGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="Dgmjr.Abstractions" />
-    <PackageReference Include="Dgmjr.System.Extensions" VersionOverride="0.0.1-Local" />
+    <PackageReference Include="Dgmjr.System.Extensions" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
