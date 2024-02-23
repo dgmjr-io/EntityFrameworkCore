@@ -79,6 +79,9 @@ public enum DbTypeNames
     /// <summary>Database type of datetime.</summary>
     [Display(Name = "datetime", Description = "Database type of datetime.", ShortName = "datetime")]
     SqlDateTime,
+    /// <summary>Database type of datetime2.</summary>
+    [Display(Name = "datetime2", Description = "Database type of datetime2.", ShortName = "datetime")]
+    SqlDateTime2,
 
     /// <summary>Database type of date.</summary>
     [Display(Name = "date", Description = "Database type of date.", ShortName = "date")]
@@ -122,5 +125,41 @@ public enum DbTypeNames
         Description = "Database type of uniqueidentifier.",
         ShortName = "uniqueidentifier"
     )]
-    UniqueIdentifier
+    UniqueIdentifier,
+
+    /// <summary>Database type of float.</summary>
+    [Display(
+        Name = "float",
+        Description = "Database type of float.",
+        ShortName = "float"
+    )]
+    Float,
+    /// <summary>Database type of GEOMETRY.</summary>
+    [Display(
+        Name = "GEOMETRY",
+        Description = "Database type of GEOMETRY.",
+        ShortName = "GEOMETRY"
+    )]
+    Geometry,
+    /// <summary>Database type of GEOGRAPHY.</summary>
+    [Display(
+        Name = "GEOGRAPHY",
+        Description = "Database type of GEOGRAPHY.",
+        ShortName = "GEOGRAPHY"
+    )]
+    Geography,
+    /// <summary>Database type of VARCHAR({0}).</summary>
+    [Display(
+        Name = "VARCHAR({0})",
+        Description = "Database type of VARCHAR({0}).",
+        ShortName = "VARCHAR({0})"
+    )]
+    VarCharX,
+    /// <summary>Database type of NVARCHAR({0}).</summary>
+    [Display(
+        Name = "NVARCHAR({0})",
+        Description = "Database type of NVARCHAR({0}).",
+        ShortName = "NVARCHAR({0})"
+    )]
+    NVarCharX,
 }

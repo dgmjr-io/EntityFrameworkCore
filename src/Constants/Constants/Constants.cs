@@ -11,7 +11,7 @@ public static class Prefixes
     /// <value>ufn_</value>
     public const string ufn_ = nameof(ufn_);
 
-    /// <value>sp_</value>
+    /// <value>udp_</value>
     public const string udp_ = nameof(udp_);
 
     /// <value>sp_</value>

@@ -13,7 +13,7 @@
 namespace Dgmjr.EntityFrameworkCore.Enums;
 
 [GenerateEnumerationRecordStruct("DbSchemas", "Dgmjr.EntityFrameworkCore")]
-public enum SchemasEnum
+public enum Schemas
 {
     [Display(Name = "DBO Schema", ShortName = "dbo", Description = "The dbo schema")]
     DboSchema,

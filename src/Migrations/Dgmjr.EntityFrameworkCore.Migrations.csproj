@@ -1,12 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+    <Description>Entity Framework Core Migrations</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     <PackageReference Include="Dgmjr.EntityFrameworkCore.Constants.All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     <ProjectReference Include="../Constants/DbTypesNamesAndSchemas/Dgmjr.EntityFrameworkCore.Constants.DbTypesNamesAndSchemas.csproj" />
+    <ProjectReference Include="../Models/Dgmjr.EntityFrameworkCore.Models.csproj" />
+    <SourceGeneratorPackageReference Include="Dgmjr.RegexDtoGenerator" />
+    <UsingsPackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Dgmjr.EntityFrameworkCore.Migrations.Constants" Static="true" />

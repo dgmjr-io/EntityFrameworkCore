@@ -1,11 +1,10 @@
-// namespace Dgmjr.EntityFrameworkCore.Migrations;
+namespace Dgmjr.EntityFrameworkCore.Migrations;
 
-// public class CreateViewOperation(string schema, string name, params Column[] columns) : SqlOperation
-// {
-//     public string Schema { get; set; } = schema;
-//     public string Name { get; set; } = name;
-//     public Column[] Columns { get; set; } = columns;
-//     public Expression
-// }
+public class CreateViewOperation(string schema, string name, string selectStatement) : SqlOperation
+{
+    public string Schema { get; set; } = schema;
+    public string Name { get; set; } = name;
+    public string SelectStatement { get; set; } = selectStatement;
 
-// public record struct Column(string DataType, string SourceTable, string ColumnName);
+    public override string Sql => Format(CreateOrAlterViewPattern, Schema, Name, SelectStatement);
+}

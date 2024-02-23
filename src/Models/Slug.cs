@@ -3,12 +3,12 @@ using static Vogen.Conversions;
 using Vogen;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-public readonly partial struct Slug(string Value) : IComparable<Slug>, IEquatable<Slug>, IComparable
+public readonly partial struct Slug(string? Value = default) : IComparable<Slug>, IEquatable<Slug>, IComparable
 {
     public Slug()
         : this(NewSlug()) { }
 
-    public string Value { get; init; } = Value;
+    public string Value { get; init; } = Value ?? NewSlug();
 
     public int CompareTo(Slug other)
         => Compare(Value, other.Value, OrdinalIgnoreCase);
@@ -28,11 +28,26 @@ public readonly partial struct Slug(string Value) : IComparable<Slug>, IEquatabl
     public override bool Equals(object? obj)
         => obj is Slug other && Equals(other);
 
+    public override int GetHashCode()
+        => Value.GetHashCode();
+
     public static bool operator==(Slug left, Slug right)
         => left.Equals(right);
 
     public static bool operator!=(Slug left, Slug right)
         => !left.Equals(right);
+
+    public static bool operator<(Slug left, Slug right)
+        => left.CompareTo(right) < 0;
+
+    public static bool operator<=(Slug left, Slug right)
+        => left.CompareTo(right) <= 0;
+
+    public static bool operator>(Slug left, Slug right)
+        => left.CompareTo(right) > 0;
+
+    public static bool operator>=(Slug left, Slug right)
+        => left.CompareTo(right) >= 0;
 }
 
 public class SlugEfCoreConverter : ValueConverter<Slug, string>
