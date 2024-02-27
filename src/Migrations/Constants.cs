@@ -78,6 +78,7 @@ public static class Constants
         { typeof(NetTopologySuite.Geometries.MultiPolygon), Geography.ShortName },
         { typeof(NetTopologySuite.Geometries.GeometryCollection), Geography.ShortName },
         { typeof(Slug), Format(CharX.DisplayName, 6) },
+        { typeof(Slug?), Format(CharX.DisplayName, 6) },
         { typeof(Uri), NVarCharMax.DisplayName },
         { typeof(uri), NVarCharMax.DisplayName },
         { typeof(urn), NVarCharMax.DisplayName },
