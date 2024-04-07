@@ -25,9 +25,9 @@ public class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<
         SqlServerDbContextOptionsBuilder optionsBuilder
     )
     {
-        #if NET8_0_OR_GREATER
+#if NET8_0_OR_GREATER
         return optionsBuilder = optionsBuilder.UseAzureSqlDefaults();
-        #endif
+#endif
         return optionsBuilder;
     }
 
