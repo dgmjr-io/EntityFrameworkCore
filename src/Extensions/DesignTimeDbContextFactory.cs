@@ -1,8 +1,7 @@
+namespace Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.SqlServer;
-
-namespace Microsoft.EntityFrameworkCore.Design;
 
 public class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext>
     where TContext : DbContext
@@ -18,7 +17,8 @@ public class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<
             )
             .AddEnvironmentVariables()
             .AddUserSecrets<TContext>()
-            .AddUserSecrets(GetType().Assembly, optional: true, reloadOnChange: true);
+            .AddUserSecrets(GetType().Assembly, optional: true, reloadOnChange: true)
+            .AddSubstitution();
     }
 
     public virtual SqlServerDbContextOptionsBuilder Configure(

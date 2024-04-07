@@ -28,6 +28,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="System.ComponentModel.Usings" />
     <PackageReference Include="System.Text.Json.Usings" />
+    <PackageReference Include="Workleap.Extensions.Configuration.Substitution" />
   </ItemGroup>
   <ItemGroup>
     <!-- <ProjectReference Include="../../../Types/src/Extensions/Dgmjr.System.Extensions.csproj" />

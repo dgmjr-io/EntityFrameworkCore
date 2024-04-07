@@ -18,9 +18,9 @@ namespace Dgmjr.EntityFrameworkCore.Extensions;
 
 public static class MigrationBuilderExtensions
 {
-    static readonly Assembly Assembly = Assembly.GetExecutingAssembly();
-    static readonly string AssemblyLocation = Assembly.Location;
-    static readonly string AssemblyDirectory = System.IO.Path.GetDirectoryName(AssemblyLocation);
+    private static readonly Assembly Assembly = Assembly.GetExecutingAssembly();
+    private static readonly string AssemblyLocation = Assembly.Location;
+    private static readonly string AssemblyDirectory = System.IO.Path.GetDirectoryName(AssemblyLocation);
 
     public static MigrationBuilder InjectSqlFromFile<T>(
         this MigrationBuilder migrationBuilder,

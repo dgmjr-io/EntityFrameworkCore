@@ -5,28 +5,19 @@ public static class DbSetExtensions
     public static void AddRange<T>(this DbSet<T> dbSet, IEnumerable<T> entities)
         where T : class
     {
-        foreach (var entity in entities)
-        {
-            dbSet.Add(entity);
-        }
+        entities.ForEach(e => dbSet.Add(e));
     }
 
     public static void RemoveRange<T>(this DbSet<T> dbSet, IEnumerable<T> entities)
         where T : class
     {
-        foreach (var entity in entities)
-        {
-            dbSet.Remove(entity);
-        }
+        entities.ForEach(entity => dbSet.Remove(entity));
     }
 
     public static void UpdateRange<T>(this DbSet<T> dbSet, IEnumerable<T> entities)
         where T : class
     {
-        foreach (var entity in entities)
-        {
-            dbSet.Update(entity);
-        }
+        entities.ForEach(entity => dbSet.Update(entity));
     }
 
     public static void AddOrUpdate<TEntity, TId>(this DbSet<TEntity> dbSet, TEntity entity)
